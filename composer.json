@@ -1,0 +1,36 @@
+{
+    "name": "ubitcorp/laravel-cities",
+    "description": "Country, Region and City models (and data) for Laravel projects",
+    "keywords": ["ubitcorp", "laravel-cities", "cities", "eloquent","countries","regions","hasan civelek"],
+    "license": "MIT",
+    "homepage": "https://github.com/ubitcorp/laravel-cities",
+    "authors": [{
+        "name": "Hasan Civelek",
+        "email": "hasan@ubit.com.tr",
+        "role": "Developer"
+    }],
+    "require": {
+        "php": "~7.1",
+        "illuminate/support": "5.5.x|5.6.x|5.7.x|5.8.x"
+    },
+    "autoload": {
+        "psr-4": {
+            "ubitcorp\\Filter\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ubitcorp\\Filter\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ubitcorp\\Cities\\ServiceProvider"
+            ],
+            "aliases": {
+                "Filter": "ubitcorp\\Cities\\Facade"
+            }
+        }
+    }
+}
