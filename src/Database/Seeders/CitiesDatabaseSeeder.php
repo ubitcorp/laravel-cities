@@ -4,6 +4,7 @@ namespace ubitcorp\Cities\Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
+use DB;
 
 class CitiesDatabaseSeeder extends Seeder
 {
