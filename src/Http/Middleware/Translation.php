@@ -1,6 +1,6 @@
 <?php
 
-namespace ubitcorp\City\Http\Middleware;
+namespace ubitcorp\Cities\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
@@ -17,7 +17,7 @@ class Translation
      */
     public function handle(Request $request, Closure $next)
     { 
-        $ln = config("city.language", "en");    
+        $ln = config("cities.language", "en");    
         
         if(isset($request['ln'])){
             $ln = $request->ln;    

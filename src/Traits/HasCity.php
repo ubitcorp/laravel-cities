@@ -1,11 +1,11 @@
 <?php
 
-namespace ubitcorp\City\Traits;
+namespace ubitcorp\Cities\Traits;
 
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
-use \ubitcorp\City\Entities\City;
-use \ubitcorp\City\Entities\CityModel;
-use \ubitcorp\City\Exceptions\HasOneCityException;
+use \ubitcorp\Cities\Entities\City;
+use \ubitcorp\Cities\Entities\CityModel;
+use \ubitcorp\Cities\Exceptions\HasOneCityException;
 use Illuminate\Database\Eloquent\Collection;
 
 trait HasCity
@@ -22,7 +22,7 @@ trait HasCity
             'model_id','id','id','city_id');    //bunu yapana kadar canim cikti..
 
         //bunda sadece pivot datasi geliyor. city gelmiyordu
-        //return $this->morphOne(\ubitcorp\City\Entities\CityModel::class, 'citiable', "model_type", "model_id");
+        //return $this->morphOne(\ubitcorp\Cities\Entities\CityModel::class, 'citiable', "model_type", "model_id");
     }
 
     public function cities(): MorphToMany

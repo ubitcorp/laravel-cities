@@ -1,6 +1,6 @@
 <?php
 
-namespace ubitcorp\City\Providers;
+namespace ubitcorp\Cities\Providers;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
@@ -12,7 +12,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    protected $namespace = 'ubitcorp\City\Http\Controllers';
+    protected $namespace = 'ubitcorp\Cities\Http\Controllers';
 
     /**
      * Called before routes are registered.

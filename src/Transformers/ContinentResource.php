@@ -1,6 +1,6 @@
 <?php
 
-namespace ubitcorp\City\Transformers;
+namespace ubitcorp\Cities\Transformers;
 
 use Illuminate\Http\Resources\Json\Resource;
 

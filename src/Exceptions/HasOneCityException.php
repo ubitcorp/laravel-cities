@@ -1,6 +1,6 @@
 <?php
 
-namespace ubitcorp\City\Exceptions;
+namespace ubitcorp\Cities\Exceptions;
  
 use InvalidArgumentException;
 

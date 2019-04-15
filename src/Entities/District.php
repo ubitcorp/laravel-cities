@@ -1,6 +1,6 @@
 <?php
 
-namespace ubitcorp\City\Entities;
+namespace ubitcorp\Cities\Entities;
 
 use Illuminate\Database\Eloquent\Model;
 use ubitcorp\Filter\Traits\Filter;
@@ -11,6 +11,6 @@ class District extends Model
     protected $guarded = ["id"];
 
     public function city(){
-        return $this->belongsTo(\ubitcorp\City\Entities\City::class);
+        return $this->belongsTo(\ubitcorp\Cities\Entities\City::class);
     }
 }

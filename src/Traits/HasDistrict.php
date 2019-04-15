@@ -1,6 +1,6 @@
 <?php
 
-namespace ubitcorp\City\Traits;
+namespace ubitcorp\Cities\Traits;
 
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
 
@@ -8,15 +8,15 @@ trait HasDistrict
 { 
     public function district() {
         return $this->hasOneThrough(
-            \ubitcorp\City\Entities\District::class, 
-            \ubitcorp\City\Entities\DistrictModel::class,
+            \ubitcorp\Cities\Entities\District::class, 
+            \ubitcorp\Cities\Entities\DistrictModel::class,
             'model_id','id','id','district_id'); 
     }
  
     public function districts(): MorphToMany
     {
         return $this->morphToMany(
-            \ubitcorp\City\Entities\District::class,
+            \ubitcorp\Cities\Entities\District::class,
             'model',
             'district_model',
             'model_id',

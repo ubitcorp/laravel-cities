@@ -1,22 +1,22 @@
 <?php
 
-namespace ubitcorp\City\Http\Controllers;
+namespace ubitcorp\Cities\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
  
-use \ubitcorp\City\Transformers\ContinentResource;
-use \ubitcorp\City\Transformers\CountryResource;
-use \ubitcorp\City\Transformers\CityResource;
-use \ubitcorp\City\Transformers\DistrictResource;
+use \ubitcorp\Cities\Transformers\ContinentResource;
+use \ubitcorp\Cities\Transformers\CountryResource;
+use \ubitcorp\Cities\Transformers\CityResource;
+use \ubitcorp\Cities\Transformers\DistrictResource;
 
-use \ubitcorp\City\Entities\Continent;
-use \ubitcorp\City\Entities\Country;
-use \ubitcorp\City\Entities\City;
-use \ubitcorp\City\Entities\District;
+use \ubitcorp\Cities\Entities\Continent;
+use \ubitcorp\Cities\Entities\Country;
+use \ubitcorp\Cities\Entities\City;
+use \ubitcorp\Cities\Entities\District;
 
-use \ubitcorp\City\Http\Middleware\Translation;
+use \ubitcorp\Cities\Http\Middleware\Translation;
 
 class CityController extends Controller
 { 

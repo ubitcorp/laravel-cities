@@ -1,6 +1,5 @@
 <?php
 
-return [
-    'name' => 'City',
+return [ 
     'language' => 'tr'    //remove this line for default (en)
 ];

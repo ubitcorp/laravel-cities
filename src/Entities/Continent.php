@@ -1,9 +1,9 @@
 <?php
 
-namespace ubitcorp\City\Entities;
+namespace ubitcorp\Cities\Entities;
 
 use Illuminate\Database\Eloquent\Model;
-use \ubitcorp\City\Traits\HasTranslations;
+use \ubitcorp\Cities\Traits\HasTranslations;
 use ubitcorp\Filter\Traits\Filter;
 
 class Continent extends Model
@@ -17,7 +17,7 @@ class Continent extends Model
     ];
 
     public function countries(){
-        return $this->hasMany(\ubitcorp\City\Entities\Country::class);
+        return $this->hasMany(\ubitcorp\Cities\Entities\Country::class);
     }
 
     public function getNameAttribute(){

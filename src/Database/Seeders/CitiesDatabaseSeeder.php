@@ -1,11 +1,11 @@
 <?php
 
-namespace ubitcorp\City\Database\Seeders;
+namespace ubitcorp\Cities\Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
 
-class CityDatabaseSeeder extends Seeder
+class CitiesDatabaseSeeder extends Seeder
 {
     /**
      * Run the database seeds.

@@ -26,7 +26,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "ubitcorp\\Cities\\Providers\\CityServiceProvider"
+                "ubitcorp\\Cities\\Providers\\ServiceProvider"
             ],
             "aliases": {
                 "Cities": "ubitcorp\\Cities\\Facade"

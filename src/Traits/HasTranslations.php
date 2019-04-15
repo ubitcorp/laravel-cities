@@ -1,6 +1,6 @@
 <?php
 
-namespace ubitcorp\City\Traits;
+namespace ubitcorp\Cities\Traits;
 
 trait HasTranslations
 {  

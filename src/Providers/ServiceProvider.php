@@ -1,11 +1,10 @@
 <?php
 
-namespace ubitcorp\City\Providers;
+namespace ubitcorp\Cities\Providers;
 
-use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Eloquent\Factory;
 
-class CityServiceProvider extends ServiceProvider
+class ServiceProvider extends Illuminate\Support\ServiceProvider
 {
     /**
      * Indicates if loading of the provider is deferred.

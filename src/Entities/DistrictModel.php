@@ -1,6 +1,6 @@
 <?php
 
-namespace ubitcorp\City\Entities;
+namespace ubitcorp\Cities\Entities;
 
 use Illuminate\Database\Eloquent\Relations\MorphPivot;
 

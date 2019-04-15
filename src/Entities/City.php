@@ -1,9 +1,9 @@
 <?php
 
-namespace ubitcorp\City\Entities;
+namespace ubitcorp\Cities\Entities;
 
 use Illuminate\Database\Eloquent\Model;
-use ubitcorp\City\Traits\HasDistrict;
+use ubitcorp\Cities\Traits\HasDistrict;
 use ubitcorp\Filter\Traits\Filter;
 
 class City extends Model
@@ -12,11 +12,11 @@ class City extends Model
     protected $guarded = ["id"];
  
     public function districts(){
-        return $this->hasMany(\ubitcorp\City\Entities\District::class);
+        return $this->hasMany(\ubitcorp\Cities\Entities\District::class);
     }
 
     public function country(){
-        return $this->belongsTo(\ubitcorp\City\Entities\Country::class);
+        return $this->belongsTo(\ubitcorp\Cities\Entities\Country::class);
     }
      
 }
