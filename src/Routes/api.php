@@ -15,6 +15,7 @@ use Illuminate\Http\Request;
 
  
 Route::middleware('auth:api')->group(function () {
+    
     Route::get("continents", "CityController@continents");
     Route::get("continents/{continent}", "CityController@continent");
     
