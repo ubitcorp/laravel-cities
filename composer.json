@@ -1,9 +1,9 @@
 {
-    "name": "ubitcorp/laravel-cities",
-    "description": "Country, Region and City models (and data) for Laravel projects",
-    "keywords": ["ubitcorp", "laravel-cities", "cities", "eloquent","countries","regions","hasan civelek"],
+    "name": "ubitcorp/laravel-settings",
+    "description": "It provides a settings model that can be used with trait on any model for Laravel project",
+    "keywords": ["ubitcorp", "laravel-settings", "settings", "hasan civelek"],
     "license": "MIT",
-    "homepage": "https://github.com/ubitcorp/laravel-cities",
+    "homepage": "https://github.com/ubitcorp/laravel-settings",
     "authors": [{
         "name": "Hasan Civelek",
         "email": "hasan@ubit.com.tr",
@@ -15,21 +15,21 @@
     },
     "autoload": {
         "psr-4": {
-            "ubitcorp\\Filter\\": "src/"
+            "ubitcorp\\Settings\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "ubitcorp\\Filter\\": "tests"
+            "ubitcorp\\Settings\\": "tests"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "ubitcorp\\Cities\\ServiceProvider"
+                "ubitcorp\\Settings\\ServiceProvider"
             ],
             "aliases": {
-                "Filter": "ubitcorp\\Cities\\Facade"
+                "Settings": "ubitcorp\\Settings\\Facade"
             }
         }
     }

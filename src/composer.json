@@ -1,0 +1,25 @@
+{
+    "name": "nwidart/city",
+    "description": "",
+    "authors": [
+        {
+            "name": "Hasan Civelek",
+            "email": "hcivelek@kuzen.net"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ubitcorp\\City\\Providers\\CityServiceProvider"
+            ],
+            "aliases": {
+                
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "ubitcorp\\City\\": ""
+        }
+    }
+}
