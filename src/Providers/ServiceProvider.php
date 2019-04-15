@@ -22,9 +22,11 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
     {
         $this->registerTranslations();
         $this->registerConfig();
-        $this->registerViews();
+        $this->registerModels();
         $this->registerFactories();
+        $this->registerLanguage();
         $this->loadMigrationsFrom(__DIR__ . '/../Database/Migrations');
+
     }
 
     /**
@@ -45,32 +47,35 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
     protected function registerConfig()
     {
         $this->publishes([
-            __DIR__.'/../Config/config.php' => config_path('city.php'),
+            __DIR__.'/../Config/config.php' => config_path('cities.php'),
         ], 'config');
         $this->mergeConfigFrom(
-            __DIR__.'/../Config/config.php', 'city'
+            __DIR__.'/../Config/config.php', 'cities'
         );
     }
 
+
+    protected function registerLanguage()
+    {
+        $ln = config("cities.language", "en");   
+        app()->instance('city_language', $ln); //it needed by some models        
+    }
+
     /**
-     * Register views.
+     * Register models.
      *
      * @return void
      */
-    public function registerViews()
+    protected function registerModels()
     {
-        $viewPath = resource_path('views/modules/city');
-
-        $sourcePath = __DIR__.'/../Resources/views';
-
+        
         $this->publishes([
-            $sourcePath => $viewPath
-        ],'views');
+            __DIR__.'/../Models/' => app_path(),
+        ], 'models');
+        
+        
+    }    
 
-        $this->loadViewsFrom(array_merge(array_map(function ($path) {
-            return $path . '/modules/city';
-        }, \Config::get('view.paths')), [$sourcePath]), 'city');
-    }
 
     /**
      * Register translations.
