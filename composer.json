@@ -1,9 +1,9 @@
 {
-    "name": "ubitcorp/laravel-settings",
-    "description": "It provides a settings model that can be used with trait on any model for Laravel project",
-    "keywords": ["ubitcorp", "laravel-settings", "settings", "hasan civelek"],
+    "name": "ubitcorp/laravel-cities",
+    "description": "It provides continents, countries, cities (with div1 and div2) and districts.",
+    "keywords": ["ubitcorp", "laravel-cities", "cities","country","continent","district", "hasan civelek"],
     "license": "MIT",
-    "homepage": "https://github.com/ubitcorp/laravel-settings",
+    "homepage": "https://github.com/ubitcorp/laravel-cities",
     "authors": [{
         "name": "Hasan Civelek",
         "email": "hasan@ubit.com.tr",
@@ -15,21 +15,21 @@
     },
     "autoload": {
         "psr-4": {
-            "ubitcorp\\Settings\\": "src/"
+            "ubitcorp\\Cities\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "ubitcorp\\Settings\\": "tests"
+            "ubitcorp\\Cities\\": "tests"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "ubitcorp\\Settings\\ServiceProvider"
+                "ubitcorp\\Cities\\ServiceProvider"
             ],
             "aliases": {
-                "Settings": "ubitcorp\\Settings\\Facade"
+                "Cities": "ubitcorp\\Cities\\Facade"
             }
         }
     }
