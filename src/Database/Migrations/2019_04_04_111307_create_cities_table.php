@@ -50,7 +50,7 @@ class CreateCitiesTable extends Migration
             $table->string("name")->nullable();
             $table->string("lat")->nullable();
             $table->string("long")->nullable();
-            $table->unsignedInteger('timezone_id');
+            $table->unsignedInteger('timezone_id')->nullable();
             $table->foreign('country_id')
             ->references('id')
             ->on('countries')
