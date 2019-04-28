@@ -14,18 +14,22 @@ use Illuminate\Http\Request;
 */
 
  
+Route::get("timezones", "CityController@timezones"); 
+Route::get("timezones/{timezone}", "CityController@timezone");
+    
 Route::middleware('auth:api')->group(function () {
     
     Route::get("continents", "CityController@continents");
     Route::get("continents/{continent}", "CityController@continent");
     
     Route::get("countries", "CityController@countries");
-    Route::get("countries/{countries}", "CityController@country");
+    Route::get("countries/{country}", "CityController@country");
     
     Route::get("cities", "CityController@cities");
-    Route::get("cities/{cities}", "CityController@city");
+    Route::get("cities/{city}", "CityController@city");
     
     Route::get("districts", "CityController@districts");
-    Route::get("districts/{districts}", "CityController@district");
-    
+    Route::get("districts/{district}", "CityController@district");
+
+
 });

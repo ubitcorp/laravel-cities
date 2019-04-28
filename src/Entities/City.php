@@ -18,5 +18,9 @@ class City extends Model
     public function country(){
         return $this->belongsTo(\ubitcorp\Cities\Entities\Country::class);
     }
+
+    public function timezone(){
+        return $this->belongsTo(\ubitcorp\Cities\Entities\Timezone::class);
+    }    
      
 }
