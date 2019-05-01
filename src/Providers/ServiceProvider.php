@@ -19,7 +19,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
      * @return void
      */
     public function boot()
-    {
+    { 
         $this->registerTranslations();
         $this->registerConfig();
         $this->registerModels();
@@ -35,7 +35,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
      * @return void
      */
     public function register()
-    {
+    { 
         $this->app->register(RouteServiceProvider::class);
     }
 

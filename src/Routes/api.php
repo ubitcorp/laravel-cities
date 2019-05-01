@@ -12,10 +12,7 @@ use Illuminate\Http\Request;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-
  
-Route::get("timezones", "CityController@timezones"); 
-Route::get("timezones/{timezone}", "CityController@timezone");
     
 Route::middleware('auth:api')->group(function () {
     
@@ -31,5 +28,7 @@ Route::middleware('auth:api')->group(function () {
     Route::get("districts", "CityController@districts");
     Route::get("districts/{district}", "CityController@district");
 
-
+    Route::get("timezones", "CityController@timezones"); 
+    Route::get("timezones/{timezone}", "CityController@timezone");
+     
 });

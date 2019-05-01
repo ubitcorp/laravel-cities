@@ -35,6 +35,21 @@ class RouteServiceProvider extends ServiceProvider
     {
         $this->mapApiRoutes();
     }
+
+    /**
+     * Register config.
+     *
+     * @return void
+     */
+    protected function registerConfig()
+    {
+        $this->publishes([
+            __DIR__.'/../Config/config.php' => config_path('cities.php'),
+        ], 'config');
+        $this->mergeConfigFrom(
+            __DIR__.'/../Config/config.php', 'cities'
+        );
+    }    
   
     /**
      * Define the "api" routes for the application.
@@ -45,7 +60,9 @@ class RouteServiceProvider extends ServiceProvider
      */
     protected function mapApiRoutes()
     {
-        Route::prefix('api')
+        $this->registerConfig();
+
+        Route::prefix(config("cities.route_prefix"))
             ->middleware('api')
             ->namespace($this->namespace)
             ->group(__DIR__ . '/../Routes/api.php');
