@@ -63,7 +63,7 @@ class RouteServiceProvider extends ServiceProvider
         $this->registerConfig();
 
         Route::prefix(config("cities.route_prefix"))
-            ->middleware('api')
+            ->middleware(config("cities.middleware"))
             ->namespace($this->namespace)
             ->group(__DIR__ . '/../Routes/api.php');
     }

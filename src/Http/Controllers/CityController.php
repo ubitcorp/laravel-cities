@@ -67,7 +67,7 @@ class CityController extends Controller
     }       
         
     //timezones
-    public function timezones(Request $request){  
+    public function timezones(Request $request){   
         return TimezoneResource::collection(Timezone::filter()->get());        
     }      
     
