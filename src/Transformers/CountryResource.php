@@ -27,9 +27,9 @@ class CountryResource extends Resource
         return [
             'id' => $this->id,
             'continent_id' => $this->continent_id,
-            'name' => $name,
-            'iso2' => $iso2,
-            'iso3' => $iso3,
+            'name' => $this->name,
+            'iso2' => $this->iso2,
+            'iso3' => $this->iso3,
             'phone_code' => $this->phone_code
         ];
     }
