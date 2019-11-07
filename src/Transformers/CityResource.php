@@ -17,13 +17,13 @@ class CityResource extends Resource
         return [
             'id' => $this->id,
             'country_id' => $this->country_id,
-            'div1_code' => $div1_code,
-            'div1_name' => $div1_name,
-            'div2_code' => $div2_code,
-            'div2_name' => $div2_name,
-            'name' => $name,
-            'lat' => $lang,
-            'long' => $long,
+            'div1_code' => $this->div1_code,
+            'div1_name' => $this->div1_name,
+            'div2_code' => $this->div2_code,
+            'div2_name' => $this->div2_name,
+            'name' => $this->name,
+            'lat' => $this->lang,
+            'long' => $this->long,
             'timezone_id' => $this->timezone_id
         ];
     }
