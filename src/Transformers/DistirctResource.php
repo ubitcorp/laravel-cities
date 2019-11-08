@@ -17,7 +17,7 @@ class DistrictResource extends Resource
         return [
             'id' => $this->id,
             'city_id' => $this->city_id,
-            'name' => $name
+            'name' => $this->name
         ];
     }
 }

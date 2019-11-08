@@ -14,15 +14,13 @@ class ContinentResource extends Resource
      */
     public function toArray($request)
     {
-        //came from middleware
-        $ln = resolve('city_language');
- 
         $name = $this->name;
 
-        if(isset($this->translations[$ln]))
-        {
+        $ln = $request->header("Accept-Language") ?? config("cities.language");  
+
+        if(isset($this->translations[$ln]))        
             $name = $this->translations[$ln];
-        }
+        
 
         return [
             'id' => $this->id,
