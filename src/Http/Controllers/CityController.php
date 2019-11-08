@@ -58,7 +58,7 @@ class CityController extends Controller
         $request->validate([
             'city_id' => 'required'
         ]);        
-        return DistrictResource::collection(District::filter()->get());
+        return DistrictResource::collection(District::filter()->orderBy("name")->get());
     }
 
     public function distirct(District $district){ 
@@ -67,7 +67,7 @@ class CityController extends Controller
         
     //timezones
     public function timezones(){   
-        return TimezoneResource::collection(Timezone::filter()->get());        
+        return TimezoneResource::collection(Timezone::filter()->orderBy("name")->get());        
     }      
     
     public function timezone(Timezone $timezone){ 
