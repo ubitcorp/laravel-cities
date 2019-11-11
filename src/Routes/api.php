@@ -13,9 +13,30 @@ use Illuminate\Http\Request;
 |
 */
  
+
+if(config('cities.middleware')){
+
+    Route::middleware(config('cities.middleware'))->group(function () {
     
-Route::middleware('auth:api')->group(function () {
+        Route::get("continents", "CityController@continents");
+        Route::get("continents/{continent}", "CityController@continent");
+        
+        Route::get("countries", "CityController@countries");
+        Route::get("countries/{country}", "CityController@country");
+        
+        Route::get("cities", "CityController@cities");
+        Route::get("cities/{city}", "CityController@city");
+        
+        Route::get("districts", "CityController@districts");
+        Route::get("districts/{district}", "CityController@district");
     
+        Route::get("timezones", "CityController@timezones"); 
+        Route::get("timezones/{timezone}", "CityController@timezone");
+         
+    });
+}
+else{
+
     Route::get("continents", "CityController@continents");
     Route::get("continents/{continent}", "CityController@continent");
     
@@ -30,5 +51,4 @@ Route::middleware('auth:api')->group(function () {
 
     Route::get("timezones", "CityController@timezones"); 
     Route::get("timezones/{timezone}", "CityController@timezone");
-     
-});
+}
