@@ -22,6 +22,11 @@ use \ubitcorp\Cities\Entities\Timezone;
 class CityController extends Controller
 { 
  
+    public function __construct()
+    {
+        $this->middleware(\ubitcorp\Cities\Http\Middleware\TranslationFiltering::class)->only("continents","countries"); 
+    } 
+
     // continents
     public function continents(){  
         return ContinentResource::collection(Continent::filter()->get());
