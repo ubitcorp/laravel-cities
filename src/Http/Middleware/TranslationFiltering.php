@@ -16,7 +16,7 @@ class TranslationFiltering
     public function handle($request, Closure $next)
     { 
         if($request->header("Accept-Language") && $request->header("Accept-Language")!="en" && $request->has('name')){
-            $request->request->add(["translations.".$request->header("Accept-Language")=>$request->name]);
+            $request->request->add(["translations->".$request->header("Accept-Language")=>$request->name]);
             $request->request->remove("name"); 
         } 
         
