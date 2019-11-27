@@ -11,6 +11,7 @@ class Country extends Model
     use HasTranslations, Filter;
 
     protected $guarded = ["id"];
+    public $timestamps = false;
 
     protected $casts = [
         'translations' => 'json',

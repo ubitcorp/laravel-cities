@@ -9,6 +9,7 @@ class Timezone extends Model
 {
     use Filter;
     protected $guarded = ["id"];
+    public $timestamps = false;
  
     public function cities(){
         return $this->hasMany(\ubitcorp\Cities\Entities\City::class);

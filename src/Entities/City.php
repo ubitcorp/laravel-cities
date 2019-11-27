@@ -10,7 +10,8 @@ class City extends Model
 {
     use Filter;
     protected $guarded = ["id"];
- 
+    public $timestamps = false;
+
     public function districts(){
         return $this->hasMany(\ubitcorp\Cities\Entities\District::class);
     }

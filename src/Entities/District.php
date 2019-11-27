@@ -9,6 +9,7 @@ class District extends Model
 {
     use Filter;
     protected $guarded = ["id"];
+    public $timestamps = false;
 
     public function city(){
         return $this->belongsTo(\ubitcorp\Cities\Entities\City::class);
