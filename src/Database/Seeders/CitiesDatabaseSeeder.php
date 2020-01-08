@@ -17,6 +17,9 @@ class CitiesDatabaseSeeder extends Seeder
     {
         Model::unguard();
          
-        DB::unprepared(file_get_contents(__DIR__.'/cities_seed.sql'));
+        if(env('DB_CONNECTION')=='pgsql')
+            DB::unprepared(file_get_contents(__DIR__.'/cities_seed_pgsql.sql'));
+        else
+            DB::unprepared(file_get_contents(__DIR__.'/cities_seed.sql'));
     }
 }
